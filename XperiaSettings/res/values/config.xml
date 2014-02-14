@@ -31,6 +31,12 @@
     <string name="penmode_sysfs_file">"/sys/devices/virtual/input/clearpad/pen"</string>
     <string name="penmode_enabled_value">1</string>
     <string name="penmode_disabled_value">0</string>
+    
+    <!-- Glove Mode -->
+    <bool name="has_glovemode">false</bool>
+    <string name="glovemode_sysfs_file">"/sys/devices/virtual/input/clearpad/glove"</string>
+    <string name="glovemode_enabled_value">1</string>
+    <string name="glovemode_disabled_value">0</string>
 
     <!-- Knock-on -->
     <bool name="has_knock_on">false</bool>

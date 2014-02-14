@@ -40,6 +40,9 @@
     <!-- Knock On -->
     <string name="knock_on_title">Knock On</string>
     <string name="knock_on_summary">"Double tap screen to wake device from sleep"</string>
+    <!-- Glove Mode -->
+    <string name="glovemode_title">Glove Mode</string>
+    <string name="glovemode_summary">"Enable using the touchscreen while wearing ordinary gloves"</string>
 
 
 </resources>
