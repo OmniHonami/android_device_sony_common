@@ -18,7 +18,7 @@
 <resources>
 
     <!-- Vibrator -->
-    <bool name="has_vibrator_tuning">false</bool>
+    <bool name="has_vibrator_tuning">true</bool>
     <string name="vibrator_sysfs_file">"/sys/devices/virtual/timed_output/vibrator/vtg_level"</string>
     <string name="intensity_max_value">100</string>
     <string name="intensity_warning_threshold">80</string>
@@ -27,13 +27,13 @@
 
 
     <!-- Pen Mode -->
-    <bool name="has_penmode">false</bool>
+    <bool name="has_penmode">true</bool>
     <string name="penmode_sysfs_file">"/sys/devices/virtual/input/clearpad/pen"</string>
     <string name="penmode_enabled_value">1</string>
     <string name="penmode_disabled_value">0</string>
     
     <!-- Glove Mode -->
-    <bool name="has_glovemode">false</bool>
+    <bool name="has_glovemode">true</bool>
     <string name="glovemode_sysfs_file">"/sys/devices/virtual/input/clearpad/glove"</string>
     <string name="glovemode_enabled_value">1</string>
     <string name="glovemode_disabled_value">0</string>

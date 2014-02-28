@@ -14,7 +14,7 @@
  *  limitations under the License.
  */
 
-package com.cyanogenmod.settings.device.prefs;
+package org.omnirom.device.prefs;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -25,15 +25,15 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.util.Log;
 
-import com.cyanogenmod.settings.device.R;
-import com.cyanogenmod.settings.device.Utils;
+import org.omnirom.device.R;
+import org.omnirom.device.Utils;
 
 /**
  * Created by championswimmer on 10/2/14.
  */
-public class KnockOnPreference extends CheckBoxPreference {
+public class PenModePreference extends CheckBoxPreference {
 
-    public static String TAG = "KnockOnPreference";
+    public static String TAG = "PenModePreference";
 
     public static String SYSFS_PATH = null;
     public static String ENABLED_VALUE;
@@ -42,13 +42,13 @@ public class KnockOnPreference extends CheckBoxPreference {
 
     private Context CONTEXT;
 
-    public KnockOnPreference(final Context context, final AttributeSet attrst) {
+    public PenModePreference(final Context context, final AttributeSet attrst) {
         super(context, attrst);
         CONTEXT = context;
-        SYSFS_PATH = context.getString(R.string.knock_on_sysfs_file);
-        ENABLED_VALUE = context.getString(R.string.knock_on_enabled_value);
-        DISABLED_VALUE = context.getString(R.string.knock_on_disabled_value);
-        SUPPORTED = context.getResources().getBoolean(R.bool.has_knock_on);
+        SYSFS_PATH = context.getString(R.string.penmode_sysfs_file);
+        ENABLED_VALUE = context.getString(R.string.penmode_enabled_value);
+        DISABLED_VALUE = context.getString(R.string.penmode_disabled_value);
+        SUPPORTED = context.getResources().getBoolean(R.bool.has_penmode);
     }
 
     @Override
@@ -65,14 +65,14 @@ public class KnockOnPreference extends CheckBoxPreference {
     }
 
     public static void restore(Context context) {
-        SYSFS_PATH = context.getString(R.string.knock_on_sysfs_file);
-        DISABLED_VALUE = context.getString(R.string.knock_on_disabled_value);
-        ENABLED_VALUE = context.getString(R.string.knock_on_enabled_value);
+        SYSFS_PATH = context.getString(R.string.penmode_sysfs_file);
+        DISABLED_VALUE = context.getString(R.string.penmode_disabled_value);
+        ENABLED_VALUE = context.getString(R.string.penmode_enabled_value);
         if (!Utils.fileExists(SYSFS_PATH)) {
             return;
         }
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
-        String value = (settings.getBoolean("knock_on", false) ? ENABLED_VALUE : DISABLED_VALUE);
+        String value = (settings.getBoolean("penmode", false) ? ENABLED_VALUE : DISABLED_VALUE);
         Utils.writeValue(SYSFS_PATH, value);
     }
 
@@ -85,7 +85,7 @@ public class KnockOnPreference extends CheckBoxPreference {
     }
 
     public Boolean checkSupport() {
-        SYSFS_PATH = getContext().getString(R.string.knock_on_sysfs_file);
+        SYSFS_PATH = getContext().getString(R.string.penmode_sysfs_file);
         Boolean fileExists = Utils.fileExists(SYSFS_PATH);
         if ((SUPPORTED && fileExists)) {
             return true;

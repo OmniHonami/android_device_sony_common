@@ -14,7 +14,7 @@
  *  limitations under the License.
  */
 
-package com.cyanogenmod.settings.device;
+package org.omnirom.device;
 
 import android.os.Bundle;
 import android.preference.ListPreference;
@@ -22,9 +22,9 @@ import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 
-import com.cyanogenmod.settings.device.prefs.KnockOnPreference;
-import com.cyanogenmod.settings.device.prefs.PenModePreference;
-import com.cyanogenmod.settings.device.prefs.VibratorTuningPreference;
+import org.omnirom.device.prefs.KnockOnPreference;
+import org.omnirom.device.prefs.PenModePreference;
+import org.omnirom.device.prefs.VibratorTuningPreference;
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On

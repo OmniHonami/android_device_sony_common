@@ -14,15 +14,15 @@
  *  limitations under the License.
  */
 
-package com.cyanogenmod.settings.device;
+package org.omnirom.device;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.cyanogenmod.settings.device.prefs.KnockOnPreference;
-import com.cyanogenmod.settings.device.prefs.PenModePreference;
-import com.cyanogenmod.settings.device.prefs.VibratorTuningPreference;
+import org.omnirom.device.prefs.KnockOnPreference;
+import org.omnirom.device.prefs.PenModePreference;
+import org.omnirom.device.prefs.VibratorTuningPreference;
 
 public class Startup extends BroadcastReceiver {
 

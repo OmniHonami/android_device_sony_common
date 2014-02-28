@@ -14,7 +14,7 @@
  *  limitations under the License.
  */
 
-package com.cyanogenmod.settings.device.prefs;
+package org.omnirom.device.prefs;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -35,8 +35,8 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.cyanogenmod.settings.device.R;
-import com.cyanogenmod.settings.device.Utils;
+import org.omnirom.device.R;
+import org.omnirom.device.Utils;
 
 /**
  * Special preference type that allows configuration of vibrator intensity settings on Sony
